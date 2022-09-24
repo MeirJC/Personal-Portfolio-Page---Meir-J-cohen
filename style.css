@@ -1,0 +1,309 @@
+/* Main Colors */
+/* https://coolors.co/cfdbd5-e8eddf-f5cb5c-242423-333533 */
+/* #242423 - Eerie Black */
+/* #333533 - Jet (grey) */
+/* #F5CB5C - Maize Crayols (bright musterd yellow) */
+/* #E8EDDF - Alabaster (light grey/blue) */
+/* #CFDBD5 - Gainsoboro (light grey/green) */
+
+/*---------------------------------*/
+/*----------Global Styles----------*/
+/*---------------------------------*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: #242423;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  /* font from Google Fonts*/
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Setting general projects picture width */
+img {
+  width: 300px;
+}
+
+/* changing the color of links in page */
+a {
+  color: #F5CB5C;
+  font-weight: 600;
+}
+
+/* removing the underline from links while hovering over */
+a:hover {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 100px;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 45px;
+}
+
+h1,
+h2 {
+  font-family: "Caveat", cursive;
+  font-weight: 400;
+  margin: 0;
+}
+
+h3 {
+  margin-bottom: 0;
+}
+
+/* defining main content width */
+.content-wrap {
+  max-width: 1000px;
+  width: 85%;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+.item-details h3+p {
+  font-style: italic;
+}
+
+.item-details h3~p {
+  margin: 0;
+}
+
+/* divider between items */
+.divider>section {
+  border-bottom: 1px dashed #242423;
+  padding: 25px 0;
+}
+
+.divider>section:last-of-type {
+  border-bottom: none;
+}
+
+/*---------------------------------*/
+/*-------------Profile-------------*/
+/*---------------------------------*/
+header {
+  background: #242423;
+  color: #f7fff7;
+  /* text-align: center; moved to responsive */
+}
+
+header:before {
+  content: '';
+  background: url("./images/Meir\ J\ Cohen-2.png") no-repeat center center/contain;
+  opacity: 0.2;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  left: 10%;
+  top: 0;
+  z-index: 1;
+}
+
+/*---------------------------------*/
+/*-------------Nav-Bar-------------*/
+/*---------------------------------*/
+nav {
+  height: 70px;
+  width: 100%;
+  /* border: 2px solid red; */
+  background-color: #252524;
+  opacity: 0.985;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 4px solid #333533;
+}
+
+.nav-ul-flex {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  /* ADD TO RESPONSIVE LATER */
+  /* flex-wrap: wrap;*/
+  /* justify-content: space-evenly; */
+}
+
+.nav-ul-flex li {
+  /* border: 2px solid blue; */
+  align-self: center;
+  /* ADD TO RESPONSIVE LATER */
+  /* width: 22%; */
+  /* margin: auto; */
+}
+
+.nav-ul-flex .nav-li-2 {
+  margin-left: auto;
+  /* border: 2px solid rgb(0, 255, 64); */
+}
+
+.nav-ul-flex li:nth-child(1) {
+  width: 100%;
+}
+
+.links img {
+  margin-top: 10px;
+  height: 65px;
+  width: auto;
+}
+
+.links-hover img:hover {
+  background-color: #4b4b48b8;
+  border-radius: 5px;
+}
+
+.nav-li-1 img {
+  height: 60px;
+  width: auto;
+}
+
+/*---------------------------------*/
+/*------------Projects-------------*/
+/*---------------------------------*/
+.projects {
+  background: #E8EDDF;
+}
+
+.projects a,
+.projects a:visited {
+  color: #E8EDDF;
+  font-weight: 600;
+  /* text color for links in project section */
+}
+
+.projects .btn {
+  color: #E8EDDF;
+  /* text color for button links in project section */
+  background: #333533;
+  text-decoration: none;
+  /* remove underline in button links in projects section */
+  padding: 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.projects .btn:hover {
+  background: #333533cc
+}
+
+/* project item classes are here to take care of floating elements */
+.project-item {
+  overflow: hidden;
+  /*border-bottom: 1px dashed #343434;*/
+  /* Adding line between projects to separate */
+  /*padding: 25px 0;*/
+  /* Adding space between projects to separate */
+}
+
+/* moved to responsive */
+/*.project-item img {
+  float: left;
+  margin-right: 20px;
+} */
+.project-item h3 {
+  margin-top: 0;
+}
+
+/*----------Work Expirience----------*/
+.work-expirience {
+  background: #CFDBD5;
+}
+
+/*defining the grid for this section*/
+/* moved to responsive */
+/* .job-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 20px;
+} */
+
+/*----------Education----------*/
+.education {
+  background-image: url(./images/invictus-tailoring-sneaker-socks-5OZgVj0YVwQ-unsplash.jpg);
+  background-size: cover;
+  background-position: top right;
+  padding-bottom: 50px;
+}
+
+/*setting the p width in education is for making sure the text wont mix with the background-image*/
+.education p {
+  width: 60%;
+}
+
+/*----------Contact Info----------*/
+footer {
+  background: #242423;
+  color: #f7fff7;
+  /* text-align: center; moved to responsive */
+}
+
+.contact-list {
+  list-style-type: none;
+  /*Removing to round bullets near ecah list item*/
+  padding: 0;
+  /* moved to responsive */
+  /* display: flex;
+  justify-content: center; */
+}
+
+.contact-list a {
+  display: inline-block;
+  padding: 20px;
+  /*added to keep space between the contact links*/
+}
+
+/*----------Responsive----------*/
+@media screen and (min-width: 750px) {
+
+  header,
+  /*dont like this one maybe remove*/
+  footer {
+    text-align: center;
+  }
+
+  .project-item img {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .job-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+  }
+
+  .contact-list {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  h1 {
+    font-size: 75px;
+    line-height: 0.95;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    line-height: 1;
+  }
+
+  .contact-list a {
+    padding: 5px;
+  }
+}
