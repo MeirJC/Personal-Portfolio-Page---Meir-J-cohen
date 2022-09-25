@@ -6,6 +6,13 @@
 /* #E8EDDF - Alabaster (light grey/blue) */
 /* #CFDBD5 - Gainsoboro (light grey/green) */
 
+/*--prussian-blue: #1d3557ff;
+  --celadon-blue: #457b9dff;
+  --powder-blue: #a8dadcff;
+  --honeydew: #f1faeeff;
+  -- white text #E8EDDF
+*/
+
 /*---------------------------------*/
 /*----------Global Styles----------*/
 /*---------------------------------*/
@@ -20,7 +27,7 @@ html {
 }
 
 body {
-  color: #242423;
+  color: #1d3557ff;
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
@@ -36,7 +43,7 @@ img {
 
 /* changing the color of links in page */
 a {
-  color: #F5CB5C;
+  color: #1D3557;
   font-weight: 600;
 }
 
@@ -67,7 +74,7 @@ h3 {
 
 /* defining main content width */
 .content-wrap {
-  max-width: 1000px;
+  max-width: 1100px;
   width: 85%;
   margin: 0 auto;
   padding: 60px 0;
@@ -95,12 +102,12 @@ h3 {
 /*-------------Profile-------------*/
 /*---------------------------------*/
 header {
-  background: #242423;
+  background: #1d3557ff;
   color: #f7fff7;
   /* text-align: center; moved to responsive */
 }
 
-header:before {
+/* header:before {
   content: '';
   background: url("./images/Meir-logo-2.png") no-repeat center center/cover;
   opacity: 0.15;
@@ -110,7 +117,7 @@ header:before {
   left: 10%;
   top: 0;
   z-index: 1;
-}
+} */
 
 .flex-head-container {
   display: flex;
@@ -118,20 +125,21 @@ header:before {
 }
 
 .header-pic {
-  max-width: 20%;
+  max-width: 22%;
+  min-width: 180px;
 }
 
 .header-pic img {
   max-width: 100%;
-  padding: 3px;
+  padding: 5px;
   border-radius: 20px;
-  background-color: #333533;
+  background-color: #457b9dff;
   box-shadow: 4 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 gray(0, 0.19);
-  animation: vibrate 1.4s;
+  animation: vibrate 1.5s;
 }
 
 .page-headers {
-  max-width: 75%;
+  max-width: 77.5%;
   text-align: left;
   padding: 5px;
   margin-left: 30px;
@@ -141,54 +149,45 @@ header:before {
 /*-------------Nav-Bar-------------*/
 /*---------------------------------*/
 nav {
-  height: 70px;
+  height: 68px;
   width: 100%;
   /* border: 2px solid red; */
-  background-color: #252524;
+  background-color: #1d3557ff;
   /*opacity: 0.985;*/
   position: sticky;
-  top: 0;
+  top: -2px;
   display: flex;
   align-items: center;
   border-bottom: 4px solid #333533;
+  z-index: 2;
 }
 
 .nav-ul-flex {
   height: 100%;
+  padding: 0;
   list-style: none;
   display: flex;
   align-items: center;
-  /* ADD TO RESPONSIVE LATER */
-  /* flex-wrap: wrap;*/
-  /* justify-content: space-evenly; */
 }
 
 .nav-ul-flex li {
   /* border: 2px solid blue; */
   align-self: center;
-  /* ADD TO RESPONSIVE LATER */
-  /* width: 22%; */
-  /* margin: auto; */
 }
 
 .nav-ul-flex .nav-li-2 {
   margin-left: auto;
 }
 
-.nav-ul-flex li:nth-child(1) {
-  width: 100%;
-}
-
 .links img {
   margin-top: 10px;
-  height: 65px;
+  max-height: 65px;
   width: auto;
 }
 
 .links:nth-child(n+2) img:hover {
-  /* background-color: #4b4b48b8; */
-  background-color: rgb(250, 250, 250);
-  border-radius: 5px;
+  background-color: #848484be;
+  border-radius: 15px;
 }
 
 .nav-li-1 img {
@@ -196,11 +195,16 @@ nav {
   width: auto;
 }
 
+.nav-li-1-mobile {
+  display: none;
+}
+
 /*---------------------------------*/
 /*------------Projects-------------*/
 /*---------------------------------*/
 .projects {
-  background: #E8EDDF;
+  background: #457b9dff;
+  color: #E8EDDF;
 }
 
 .projects a,
@@ -213,7 +217,8 @@ nav {
 .projects .btn {
   color: #E8EDDF;
   /* text color for button links in project section */
-  background: #333533;
+  border: 2px solid#E8EDDF;
+  background: #1d3557ff;
   text-decoration: none;
   /* remove underline in button links in projects section */
   padding: 8px;
@@ -222,7 +227,7 @@ nav {
 }
 
 .projects .btn:hover {
-  background: #333533cc
+  background: #1d3557aa;
 }
 
 /* project item classes are here to take care of floating elements */
@@ -243,9 +248,11 @@ nav {
   margin-top: 0;
 }
 
+/*-----------------------------------*/
 /*----------Work Expirience----------*/
+/*-----------------------------------*/
 .work-experience {
-  background: #CFDBD5;
+  background: #F2BB05;
 }
 
 /*defining the grid for this section*/
@@ -256,7 +263,9 @@ nav {
   column-gap: 20px;
 } */
 
-/*----------Education----------*/
+/*---------------------------------*/
+/*------------Education------------*/
+/*---------------------------------*/
 .education {
   background-image: url(./images/invictus-tailoring-sneaker-socks-5OZgVj0YVwQ-unsplash.jpg);
   background-size: cover;
@@ -269,10 +278,12 @@ nav {
   width: 60%;
 }
 
-/*----------Contact Info----------*/
+/*---------------------------------*/
+/*-----------Contact Info----------*/
+/*---------------------------------*/
 footer {
-  background: #242423;
-  color: #f7fff7;
+  background: #f1faeeff;
+  color: #1d3557ff;
   /* text-align: center; moved to responsive */
 }
 
@@ -291,7 +302,9 @@ footer {
   /*added to keep space between the contact links*/
 }
 
-/*----------header pic Animation----------*/
+/*---------------------------------*/
+/*-------header pic Animation------*/
+/*---------------------------------*/
 @keyframes vibrate {
   0% {
     transform: rotate(15deg);
@@ -365,7 +378,9 @@ footer {
   }
 }
 
-/*----------Responsive----------*/
+/*---------------------------------*/
+/*-------Responsive (general)------*/
+/*---------------------------------*/
 @media screen and (min-width: 750px) {
 
   header,
@@ -373,6 +388,11 @@ footer {
   footer {
     text-align: center;
   }
+
+  .links img {
+    max-height: 65px;
+  }
+
 
   .project-item img {
     float: left;
@@ -391,9 +411,12 @@ footer {
   }
 }
 
+/*---------------------------------*/
+/*-------Responsive (tablets)------*/
+/*---------------------------------*/
 @media screen and (max-width: 749px) {
   h1 {
-    font-size: 75px;
+    font-size: 70px;
     line-height: 0.95;
     margin-bottom: 10px;
   }
@@ -402,7 +425,54 @@ footer {
     line-height: 1;
   }
 
+  .page-headers {
+    max-width: 100%;
+    text-align: center;
+    /* padding: 5px; */
+    /* margin-left: 30px; */
+  }
+
+  .flex-head-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .links img {
+    max-height: 50px;
+  }
+
+  .header-pic {
+    max-width: 35%;
+  }
+
+  .nav-li-1 {
+    display: none;
+  }
+
+  .nav-li-1-mobile {
+    display: block;
+    scale: 0.8;
+  }
+
   .contact-list a {
     padding: 5px;
+  }
+}
+
+/*---------------------------------*/
+/*--------Responsive (mobile)------*/
+/*---------------------------------*/
+@media screen and (max-width: 550px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+
+  .links img {
+    max-height: 50px;
   }
 }
