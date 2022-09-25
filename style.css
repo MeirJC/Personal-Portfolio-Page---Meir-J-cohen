@@ -102,14 +102,39 @@ header {
 
 header:before {
   content: '';
-  background: url("./images/Meir\ J\ Cohen-2.png") no-repeat center center/contain;
-  opacity: 0.2;
+  background: url("./images/Meir-logo-2.png") no-repeat center center/cover;
+  opacity: 0.15;
   position: absolute;
   width: 80%;
   height: 80%;
   left: 10%;
   top: 0;
   z-index: 1;
+}
+
+.flex-head-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-pic {
+  max-width: 20%;
+}
+
+.header-pic img {
+  max-width: 100%;
+  padding: 3px;
+  border-radius: 20px;
+  background-color: #333533;
+  box-shadow: 4 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 gray(0, 0.19);
+  animation: vibrate 1.4s;
+}
+
+.page-headers {
+  max-width: 75%;
+  text-align: left;
+  padding: 5px;
+  margin-left: 30px;
 }
 
 /*---------------------------------*/
@@ -120,7 +145,7 @@ nav {
   width: 100%;
   /* border: 2px solid red; */
   background-color: #252524;
-  opacity: 0.985;
+  /*opacity: 0.985;*/
   position: sticky;
   top: 0;
   display: flex;
@@ -148,7 +173,6 @@ nav {
 
 .nav-ul-flex .nav-li-2 {
   margin-left: auto;
-  /* border: 2px solid rgb(0, 255, 64); */
 }
 
 .nav-ul-flex li:nth-child(1) {
@@ -161,8 +185,9 @@ nav {
   width: auto;
 }
 
-.links-hover img:hover {
-  background-color: #4b4b48b8;
+.links:nth-child(n+2) img:hover {
+  /* background-color: #4b4b48b8; */
+  background-color: rgb(250, 250, 250);
   border-radius: 5px;
 }
 
@@ -219,7 +244,7 @@ nav {
 }
 
 /*----------Work Expirience----------*/
-.work-expirience {
+.work-experience {
   background: #CFDBD5;
 }
 
@@ -264,6 +289,80 @@ footer {
   display: inline-block;
   padding: 20px;
   /*added to keep space between the contact links*/
+}
+
+/*----------header pic Animation----------*/
+@keyframes vibrate {
+  0% {
+    transform: rotate(15deg);
+  }
+
+  /*5% { transform: rotate(-15deg); }*/
+  /*10% { transform: rotate(0deg); }*/
+  /*15% { transform: rotate(-12.5deg); }*/
+  20% {
+    transform: rotate(-15deg);
+  }
+
+  /*25% { transform: rotate(-10deg); }*/
+  /*30% { transform: rotate(0deg); }*/
+  /*35% { transform: rotate(12.5deg); }*/
+  40% {
+    transform: rotate(-12.5deg);
+  }
+
+  /*45% { transform: rotate(-5deg); }*/
+  /*50% { transform: rotate(-12.5deg); }*/
+  55% {
+    transform: rotate(12.5deg);
+  }
+
+  /*60% { transform: rotate(-2.5deg); }*/
+  /*65% { transform: rotate(3deg); }*/
+  70% {
+    transform: rotate(-10deg);
+  }
+
+  /*75% { transform: rotate(2deg); }*/
+  80% {
+    transform: rotate(7.5deg);
+  }
+
+  85% {
+    transform: rotate(-5deg);
+  }
+
+  90% {
+    transform: rotate(3deg);
+  }
+
+  94% {
+    transform: rotate(-2deg);
+  }
+
+  95% {
+    transform: rotate(2deg);
+  }
+
+  96% {
+    transform: rotate(-1.5deg);
+  }
+
+  97% {
+    transform: rotate(1.5deg);
+  }
+
+  98% {
+    transform: rotate(-1deg);
+  }
+
+  99% {
+    transform: rotate(1deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 /*----------Responsive----------*/
